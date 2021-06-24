@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Noto Sans JP;
+}
+body{
+    max-width: 375px;
+}
+
+div{
+    border: 2px solid black;
+}
+.phone{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 19px;
+}
+
+.phone .status{
+    display: flex;
+}
+
+.status .wifi{
+    padding: 0 6px;
+}
+
+.trollbasket{
+    font-style: normal;
+    font-weight: 500;
+    color: #333333;
+    padding-left:19px ;
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-family: Noto Sans JP;
+    line-height: 21px;
+}
+
+.lagosorder{
+    padding: 12px 19px ;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px  #E5E5E5 solid;
+    border-top: 1px  #E5E5E5 solid;
+
+}
+
+.lagosorder p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.lagosorder .lagos,.order,.cart{
+    display: flex;
+}
+
+.lagos p{
+    padding: 0 11px;
+    color: #071827;
+}
+
+
+.myorder p{
+    padding-left: 14px;
+    color: #071827;
+}
+
+.carttext p{
+    padding-left: 12px;
+    color: #071827;
+}
+
+.lagosorder .lagos, .lagosorder .order, .lagosorder .cart{
+    align-items: center;
+}
+.lagosorder .location, .lagosorder .calender , .lagosorder .carticon{
+    border-radius: 50%;
+    height: 30px;
+    display: flex;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    background: #EDF2F7;
+}
+
+.lagosorder .location{
+    color: #227EFF;
+}
+
+.lagosorder .calender{
+    color: #7E42F5;
+}
+
+.lagosorder .carticon{
+    color: #2E4457;
+}
+
+
+/* search  */
+.search{
+    margin: 12px 16px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: #EDF2F7;
+
+}
+
+.search input{
+    padding: 8px;
+    padding-left: 16px;
+    width: 90%;
+    height: 100%;
+    opacity: 0.9;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.search .searchicon{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+/* card  */
+.card{
+    display: flex;
+    justify-content: space-between;
+    height: 125px;
+}
+
+.card .havingissues{
+    width: 318px;
+    /* width: 75%; */
+    margin: 0 8px;
+    background: #003277;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 24px;
+}
+
+.havingissues .havingtext{
+    width: 160px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+.havingissues .havingtext span{
+    color: #EE6F44;
+}
+
+.havingissues .contactus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 19px;
+    width: 91px;
+    height: 31px;
+    left: 203px;
+    top: 45px;
+    background: #227EFF;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+
+.card .left, .card .right{
+    width: 10%;
+}
+
+.card .left{
+    background: #227EFF;
+    border-radius: 4px;
+}
+
+.card .right{
+    background: #EE6F44;
+    border-radius: 4px;
+}
+
+/* pprs  */
+.pprs{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 25px;
+    /* align-items: center; */
+}
+
+.pprs .book{
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    /* border: 2px solid black; */
+    background: #05944F;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+
+}
+
+.pprs .text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    /* or 150% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.01em;
+
+    color: #29394F;
+}
+
+.pc .book{
+    background: #227EFF;
+}
+.pp .book{
+    background: #EE6F44;
+}
+.rp .book{
+    background: #7E42F5;
+}
+
+
+/* theproducts  */
+.theproducts{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4px 18px;
+    margin-bottom: 100px;
+
+}
+
+.product{
+    height: 160px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.product p{
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #718596;
+}
+
+.product p.fool{
+    height: 30px;
+}
+
+.product .text{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: #071827;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0px 35px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: white;
+}
+
+.navbar .nav .icon{
+    padding-bottom: 10px;
+
+}
+
+.navbar .nav .text{
+    margin-bottom: 15px;
+}

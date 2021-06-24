@@ -1,0 +1,230 @@
+.backdetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+
+
+.backdetails .back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EDF2F7;
+}
+
+.backgrounds{
+    background-color: #F6F2F2 ;
+}
+
+.backdetails .details p{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #212C3D;
+    
+}
+
+.backdetails .searchcart{
+    display: flex;
+    align-items: center;
+}
+
+.backdetails .searchcart .search, .backdetails .searchcart .cart{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EDF2F7;
+}
+
+.backdetails .searchcart .search{
+    margin-right: 16px;
+}
+
+/* successfully */
+.successfully{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 343px;
+    height: 36px;
+    padding: 8px 16px;
+    background: #D3FDE9;
+    border: 1px solid #93ECC1;
+    border-radius: 4px;
+
+    position: absolute;
+    left: 16px;
+}
+
+/* itemimage  */
+
+.itemimage{
+    padding: 16px 32px;
+    max-width: 312px;
+    margin: auto;
+}
+
+.itemimage img{
+    width: 100%;
+}
+
+.aboutimage {
+    padding: 16px;
+    background-color: white;
+}
+
+.aboutimage p:first-child{
+    font-size: 14px;
+    line-height: 21px;
+    color: #212C3D;
+}
+
+.aboutimage p:nth-child(2){
+    font-size: 12px;
+    line-height: 21px;
+    color: #627483;
+    max-width: 307px;
+    margin-bottom: 18px;
+}
+
+.aboutimage p:nth-child(3){
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #212C3D;
+}
+
+.aboutimage span{
+    font-size: 12px;
+    line-height: 21px;
+    color: #627483;
+}
+
+/* productdescription  */
+.productdescription{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    font-size: 14px;
+    color: #212C3D;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+/* reviewandall  */
+.reviewandall{
+    padding: 16px;
+}
+
+.reviewandall .ratingall{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+}
+
+.reviewandall .ratingall p:first-child{
+    color: #212C3D;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.reviewandall .ratingall p:nth-child(2){
+    color: #227EFF;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.reviewandall .ratingicon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.reviewandall .ratingicon i{
+    color: #FFCA42;
+    font-size: 12px;
+}
+
+.reviewandall .ratingicon i:nth-child(4),.reviewandall .ratingicon i:nth-child(5){
+    color: #EEEFF2;
+}
+
+.reviewandall .ratingicon p{
+    margin-left: 7px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    color: #212C3D;
+}
+
+.description p{
+    font-size: 12px;
+    line-height: 21px;
+    color: #627483;
+    margin-right: 35px;
+}
+
+/* .segun */
+.segun{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+.segun p{
+    font-size: 12px;
+    line-height: 21px;
+    margin-left: 8px;
+    color: #212C3D;
+}
+
+.segun .image{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* addwish */
+.addwish{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 10px solid #F6F2F2;
+}
+
+.addwish .add{
+    padding: 12px ;
+    background: #227EFF;
+    border-radius: 4px;
+    width: 167px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+.addwish .wish{
+    margin-left: 9px;
+    background: white;
+    color: #2E4457;
+    border: 1px solid #E5E5E5;
+}

@@ -1,0 +1,176 @@
+/* backcart */
+.backcart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.backcart .back{
+    height: 24px;
+    width: 24px;
+    background: #EDF2F7;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backcart div p{
+    font-size: 14px;
+    line-height: 21px;
+    color: #212C3D;
+}
+
+.backcart .disguise{
+    width: 24px;
+}
+
+/* background */
+
+.background{
+    background-color: #F6F2F2;
+    padding-top: 20px;
+    padding-bottom: 24px;
+}
+
+.background .coke{
+    max-width: 343px;
+    /* height: 112px; */
+    margin: auto;
+    padding: 9px 16px;
+    background-color: white;
+}
+
+.background .coke:nth-child(2){
+    margin-top: 15px;
+}
+
+.background .coke .image{
+    width: 48px;
+    height: 48px;
+    
+}
+
+.background .coke .image img{
+    width: 100%;
+}
+
+.background .coke .imagename{
+    display: flex;
+    padding: 11px;
+
+}
+
+.background .coke .imagename .text{
+    margin-left: 16px;
+}
+
+.background .coke .imagename .text p:first-child{
+    color: #212C3D;
+    font-size: 14px;
+}
+
+.background .coke .imagename .text p:nth-child(2){
+    color: #212C3D;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+
+.coke hr{
+    border: 1px solid #F6F2F2;
+}
+
+
+/* deletecounter */
+
+.coke .deletecounter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coke .deletecounter .delete .icon{
+    margin: 12px;
+    color: #E25959;
+}
+
+.coke .deletecounter .delete, .coke .deletecounter .counter{
+    display: flex;
+    align-items: center;
+}
+
+.coke .deletecounter .counter .plus{
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 0.7px solid #123CD3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coke .deletecounter .counter .text{
+    margin: 7px;
+}
+
+
+
+
+/* subtotalcheckout */
+.subtotalcheckout{
+    padding: 16px;
+}
+.subtotalcheckout .subtotal, .subtotalcheckout .total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtotalcheckout p{
+    font-size: 14px;
+    color: #212c3d;
+    line-height: 21px;
+}
+
+.subtotalcheckout .total p:nth-child(2){
+    font-weight: 700;
+}
+
+.subtotalcheckout .total{
+    margin-top: 16px;
+}
+
+.subtotalcheckout button{
+    height: 56px;
+    width: 100%;
+    background-color: #227eff;
+    border-radius: 4px;
+    padding: 16px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    outline: none;
+    border: none;
+    margin-top: 16px;
+}
+
+/* .recentlyviewed */
+.recentlyviewed{
+    padding: 16px;
+}
+
+.recentlyviewed .text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #212C3D;
+
+}
+
+.recentlyviewed .text p:nth-child(2){
+    color: #227EFf;
+}
