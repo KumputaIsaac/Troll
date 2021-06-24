@@ -1,6 +1,5 @@
 import './homepage.css';
 
-import React, { useState } from 'react'
 import shoe from '../../images/2.png'
 import coke from '../../images/1.png'
 import hand from '../../images/3.png'
