@@ -8,8 +8,13 @@ import {
 import Homepage from './pages/homepage/Homepage';
 import Detail from './pages/details/Detail';
 import Cart from './pages/cart/Cart';
+import { useState } from 'react';
 
 function App() {
+  const [itemdetails, setitemdetails] = useState([])
+  const [cart, setcart] = useState([])
+
+
   return (
     <div className="App">
       <homepage />
@@ -17,13 +22,13 @@ function App() {
      
         <Switch>
           <Route path="/cart">
-           <Cart />
+           <Cart cart={cart} itemdetails={itemdetails}/>
           </Route>
           <Route path="/detail">
-           <Detail />
+           <Detail itemdetails={itemdetails} setcart={setcart} cart={cart}/>
           </Route>
           <Route path="/">
-           <Homepage/>
+           <Homepage setitemdetails={setitemdetails}/>
           </Route>
         </Switch>
     </Router>

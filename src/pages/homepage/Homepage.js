@@ -1,6 +1,6 @@
 import './homepage.css';
 
-import React from 'react'
+import React, { useState } from 'react'
 import shoe from '../../images/2.png'
 import coke from '../../images/1.png'
 import hand from '../../images/3.png'
@@ -12,140 +12,173 @@ import buy from '../../images/test1.svg'
 import deal from '../../images/test2.svg'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
-const Homepage = () => {
+const Homepage = ({setitemdetails}) => {
+    const products = 
+    [
+        {
+            photo: hand,
+            name:'Free sample small tote bag gucci fen...',
+            price:'₦900 - ₦1,500',
+            pieces:'MOQ 4 (pieces)',
+            location: 'Lagos', 
+            quantity:0,
+            description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
+            id:1
+        },
+        {
+            photo: shoe,
+            name:'Nice Vans Sneakers',
+            price:'₦1900 - ₦45,500',
+            id:2,
+            location: 'Lagos', 
+            quantity:0,
+            description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
+            pieces:'MOQ 4 (pieces)'
+        },
+        {
+            photo: coke,
+            name:'Free sample small drink',
+            price:'₦900 - ₦1,500',
+            id:3,
+            location: 'Lagos', 
+            quantity:0,
+            description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
+            pieces:'MOQ 4 (pieces)'
+        },
+        {
+            photo: nylon,
+            name:'Free sample small nylon',
+            price:'₦900 - ₦1,500',
+            id:3,
+            quantity:0,
+            location: 'Lagos', 
+            description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
+            pieces:'MOQ 4 (pieces)'
+        },
+        {
+            photo: food,
+            name:'Free sample small food',
+            price:'₦900 - ₦1,500',
+            id:3,
+            quantity:0,
+            location: 'Lagos', 
+            description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
+            pieces:'MOQ 4 (pieces)'
+        },
+        {
+            photo: box,
+            name:'Free sample small box',
+            price:'₦900 - ₦1,500',
+            quantity:0,
+            id:3,
+            location: 'Lagos', 
+            description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
+            pieces:'MOQ 4 (pieces)'
+        }
+    ]
     return (
         <div>
-            <div class="phone">
-                <div class="time">9:41</div>
-                <div class="status">
-                    <div class="bar"><i class="fas fa-signal"></i></div>
-                    <div class="wifi"><i class="fas fa-wifi"></i></div>
-                    <div class="battery"><i class="fas fa-battery-full"></i></div>
+            <div className="phone">
+                <div className="time">9:41</div>
+                <div className="status">
+                    <div className="bar"><i className="fas fa-signal"></i></div>
+                    <div className="wifi"><i className="fas fa-wifi"></i></div>
+                    <div className="battery"><i className="fas fa-battery-full"></i></div>
                 </div>
             </div>
-            <div class="trollbasket">
+            <div className="trollbasket">
                 <p>Trollbasket</p>
             </div>
-            <div class="lagosorder">
-                <div class="lagos">
-                    <div class="location"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="lagostext"><p>Lagos</p></div>
-                    <div class="dropdown"><i class="fas fa-caret-down"></i></div>
+            <div className="lagosorder">
+                <div className="lagos">
+                    <div className="location"><i className="fas fa-map-marker-alt"></i></div>
+                    <div className="lagostext"><p>Lagos</p></div>
+                    <div className="dropdown"><i className="fas fa-caret-down"></i></div>
                 </div>
-                <div class="vl"></div>
-                <div class="order">
-                    <div class="calender"><i class="fas fa-calendar-day"></i></div>
-                    <div class="myorder"><p>My Orders</p></div>
+                <div className="vl"></div>
+                <div className="order">
+                    <div className="calender"><i className="fas fa-calendar-day"></i></div>
+                    <div className="myorder"><p>My Orders</p></div>
                 </div>
-                <div class="vl"></div>
+                <div className="vl"></div>
                 <Link to='/cart'>
-                    <div class="cart">
-                        <div class="carticon"><i class="fas fa-shopping-cart"></i></div>
-                        <div class="carttext"><p>Cart</p></div>
+                    <div className="cart">
+                        <div className="carticon"><i className="fas fa-shopping-cart"></i></div>
+                        <div className="carttext"><p>Cart</p></div>
                     </div>
                 </Link>
                 
             </div>
-            <div class="search">
+            <div className="search">
                 <input type="text" placeholder="Search merchbuy"/>
-                <div class="searchicon"><i class="fas fa-search"></i></div>
+                <div className="searchicon"><i className="fas fa-search"></i></div>
             </div>
 
-            <div class="card">
-                <div class="left"></div>
-                <div class="havingissues">
-                    <div class="havingtext"><p>Having any <span>issues </span>  with <br/> your order? </p></div>
-                    <div class="contactus">Contact Us</div>
+            <div className="card">
+                <div className="left"></div>
+                <div className="havingissues">
+                    <div className="havingtext"><p>Having any <span>issues </span>  with <br/> your order? </p></div>
+                    <div className="contactus">Contact Us</div>
                 </div>
-                <div class="right"></div>
+                <div className="right"></div>
             </div>
 
-            <div class="pprs">
-                <div class="pc">
-                    <div class="book"><i class="fas fa-book"></i></div>
-                    <div class="text"><p>Product <br/> categories</p></div>
+            <div className="pprs">
+                <div className="pc">
+                    <div className="book"><i className="fas fa-book"></i></div>
+                    <div className="text"><p>Product <br/> categories</p></div>
                 </div>
-                <div class="pp">
-                    <div class="book"><i class="fas fa-fire"></i></div>
-                    <div class="text"><p>Popular <br/> Products</p></div>
+                <div className="pp">
+                    <div className="book"><i className="fas fa-fire"></i></div>
+                    <div className="text"><p>Popular <br/> Products</p></div>
                 </div>
-                <div class="rp">
-                    <div class="book"><i class="far fa-thumbs-up"></i></div>
-                    <div class="text"><p>Recommended <br/> Products</p></div>
+                <div className="rp">
+                    <div className="book"><i className="far fa-thumbs-up"></i></div>
+                    <div className="text"><p>Recommended <br/> Products</p></div>
                 </div>
-                <div class="shop">
-                    <div class="book"><i class="fas fa-store"></i></div>
-                    <div class="text"><p>Shops</p></div>
-                </div>
-            </div>
-
-            <div class="theproducts">
-                <Link to='/detail'>
-                    <div class="product">
-                        <div class="image"><img src={hand} alt=""/></div>
-                        <p class="fool">Free sample small tote bag gucci fen...</p>
-                        <p class="text">₦900 - ₦1,500</p>
-                        <p>MOQ 4 (pieces)</p>
-
-                    </div>
-                </Link>
-                
-                <div class="product">
-                    <div class="image"><img src={shoe} alt=""/></div>
-                    <p class="fool">Free sample small tote bag gucci fen...</p>
-                    <p class="text">₦900 - ₦1,500</p>
-                    <p>MOQ 4 (pieces)</p>
-
-                </div>
-                <div class="product">
-                    <div class="image"><img src={coke} alt=""/></div>
-                    <p class="fool">Free sample small </p>
-                    <p class="text">₦900 - ₦1,500</p>
-                    <p>MOQ 4 (pieces)</p>
-
-                </div>
-                <div class="product">
-                    <div class="image"><img src={nylon} alt=""/></div>
-                    <p class="fool">Free sample small tote bag gucci fen...</p>
-                    <p class="text">₦900 - ₦1,500</p>
-                    <p>MOQ 4 (pieces)</p>
-
-                </div>
-                <div class="product">
-                    <div class="image"><img src={food} alt=""/></div>
-                    <p class="fool">Free sample small tote bag gucci fen...</p>
-                    <p class="text">₦900 - ₦1,500</p>
-                    <p>MOQ 4 (pieces)</p>
-
-                </div>
-                <div class="product">
-                    <div class="image"><img src={box} alt=""/></div>
-                    <p class="fool">Free sample small tote bag gucci fen...</p>
-                    <p class="text">₦900 - ₦1,500</p>
-                    <p>MOQ 4 (pieces)</p>
+                <div className="shop">
+                    <div className="book"><i className="fas fa-store"></i></div>
+                    <div className="text"><p>Shops</p></div>
                 </div>
             </div>
 
-            <div class="navbar">
-                <div class="nav">
-                    <div class="icon"><img src={home} alt=""/></div>
-                    <div class="text">Home</div>
+            <div className="theproducts">
+                    {
+                        products.map((product,i)=>(
+                            <Link to='/detail'>
+                                <div onClick={()=>setitemdetails(product)} className="product" key={i}>
+                                    <div className="image"><img src={product.photo} alt=""/></div>
+                                    <p className="fool">{product.name}</p>
+                                    <p className="text">{product.price}</p>
+                                    <p>{product.pieces}</p>
+
+                                </div>
+                            </Link>
+                        ))
+                    }
+
+            </div>
+
+            <div className="navbar">
+                <div className="nav">
+                    <div className="icon"><img src={home} alt=""/></div>
+                    <div className="text">Home</div>
                 </div>
-                <div class="nav">
-                    <div class="icon"><img src={buy} alt=""/></div>
-                    <div class="text">Buy</div>
+                <div className="nav">
+                    <div className="icon"><img src={buy} alt=""/></div>
+                    <div className="text">Buy</div>
                 </div>
-                <div class="nav">
-                    <div class="icon"><img src={deal} alt=""/></div>
-                    <div class="text">Deals</div>
+                <div className="nav">
+                    <div className="icon"><img src={deal} alt=""/></div>
+                    <div className="text">Deals</div>
                 </div>
-                <div class="nav">
-                    <div class="icon"><i class="fas fa-wallet"></i></div>
-                    <div class="text">Wallet</div>
+                <div className="nav">
+                    <div className="icon"><i className="fas fa-wallet"></i></div>
+                    <div className="text">Wallet</div>
                 </div>
-                <div class="nav">
-                    <div class="icon"><i class="fas fa-bars"></i></div>
-                    <div class="text">Menu</div>
+                <div className="nav">
+                    <div className="icon"><i className="fas fa-bars"></i></div>
+                    <div className="text">Menu</div>
                 </div>
             </div>
         </div>

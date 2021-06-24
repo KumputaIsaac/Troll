@@ -4,88 +4,89 @@ import right from '../../images/right.svg'
 import segun from '../../images/segun.svg'
 import back from '../../images/back.svg'
 import times from '../../images/times.svg'
-import shoe from '../../images/22.png'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import { useState } from 'react'
 
 
-const Detail = () => {
+const Detail = ({itemdetails,setcart,cart}) => {
 
     const [visible, setvisible] = useState(false)
 
     const handleaddclick =()=>{
         setvisible(true)
+        setcart(cart=>[...cart,itemdetails])
+        console.log(cart)
     }
 
     const handlecancel=()=>{
         setvisible(false)
+  
     }
     return (
         <div>
-            <div class="backdetails">
+            <div className="backdetails">
                 <Link to='/'>
-                    <div class="back"><img src={back} alt=""/></div>
+                    <div className="back"><img src={back} alt=""/></div>
                 </Link>
                 
-                <div class="detail"><p>Details</p></div>
-                <div class="searchcart">
-                    <div class="search"><i class="fas fa-search"></i></div>
+                <div className="detail"><p>Details</p></div>
+                <div className="searchcart">
+                    <div className="search"><i className="fas fa-search"></i></div>
                     <Link to='/cart'>
-                        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+                        <div className="cart"><i className="fas fa-shopping-cart"></i></div>
                     </Link>
                 </div>
             </div>
-            <div class='backgrounds'>
+            <div className='backgrounds'>
                 {
                     visible?
-                    <div class="successfully">
+                    <div className="successfully">
                         <p>Item added to cart successfully</p>
                         <img onClick={handlecancel} src={times} alt=""/>
                     </div>: ''
                 }
                 
-                <div class="itemimage">
-                    <img src={shoe} alt=""/>
+                <div className="itemimage">
+                    <img src={itemdetails.photo} alt=""/>
                 </div>
-                <div class="aboutimage">
-                    <p >NIKE Huararche 2019</p>
-                    <p >Get comfy and comfortable with the new 2019 designer
-                        sneaker for all your events </p>
-                    <p >N45,000 - N80,000 <span>/Piece</span></p>
+                <div className="aboutimage">
+                    <p >{itemdetails.name}</p>
+                    <p >{itemdetails.description}</p>
+                    <p >{itemdetails.price} <span>/Piece</span></p>
                 </div>
             </div>
             
-            <div class="productdescription">
+            <div className="productdescription">
                 <p>Product Description</p>
                 <img src={right} alt=""/>
             </div>
             
-            <div class="reviewandall">
-                <div class="ratingall">
+            <div className="reviewandall">
+                <div className="ratingall">
                     <p>Review and Rating</p>
                     <p>View all</p>
                 </div>
-                <div class="ratingicon">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
+                <div className="ratingicon">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="far fa-star"></i>
+                    <i className="far fa-star"></i>
                     <p>3.0</p>
                 </div>
-                <div class="description">
+                <div className="description">
                     <p>This is the best product I have used in a long while and the
                         size fits perfectly and I love the colors!!!!!</p>
                 </div>
-                <div class="segun">
-                    <div class="image"><img src={segun} alt=""/></div>
-                    <p class="text">Segun Arinze</p>
+                <div className="segun">
+                    <div className="image"><img src={segun} alt=""/></div>
+                    <p className="text">Segun Arinze</p>
                 </div>
             </div>
 
-            <div class="addwish">
-                <div onClick={handleaddclick} class="add"><p>Add to cart</p></div>
-                <div class="add wish"><p>Wishlist</p></div>
+            <div className="addwish">
+                <div onClick={handleaddclick} className="add"><p>Add to cart</p></div>
+                <div className="add wish"><p>Wishlist</p></div>
             </div>
         </div>
     )
