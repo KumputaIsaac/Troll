@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import { useState } from 'react'
 
 
-const Detail = ({itemdetails,setcart,cart}) => {
+const Detail = ({itemdetails,setcart,cart,cartnumber}) => {
 
     const [visible, setvisible] = useState(false)
 
@@ -33,7 +33,10 @@ const Detail = ({itemdetails,setcart,cart}) => {
                 <div className="searchcart">
                     <div className="search"><i className="fas fa-search"></i></div>
                     <Link to='/cart'>
-                        <div className="cart"><i className="fas fa-shopping-cart"></i></div>
+                        <div className="cart">
+                            <div className="cartnumber">{cartnumber}</div>
+                            <i className="fas fa-shopping-cart"></i>
+                        </div>
                     </Link>
                 </div>
             </div>

@@ -49,6 +49,26 @@
     background: #EDF2F7;
 }
 
+.backdetails .searchcart .cart{
+    position: relative;
+}
+
+.backdetails .searchcart .cart .cartnumber{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    top:-5px;
+    right: -8px;
+    background: #EE6F44;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .backdetails .searchcart .search{
     margin-right: 16px;
 }
@@ -65,7 +85,7 @@
     border: 1px solid #93ECC1;
     border-radius: 4px;
 
-    position: absolute;
+    position: fixed;
     left: 16px;
 }
 

@@ -1,5 +1,4 @@
 import './homepage.css';
-
 import shoe from '../../images/2.png'
 import coke from '../../images/1.png'
 import hand from '../../images/3.png'
@@ -10,8 +9,11 @@ import home from '../../images/test4.svg'
 import buy from '../../images/test1.svg'
 import deal from '../../images/test2.svg'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { useEffect, useState } from 'react';
 
-const Homepage = ({setitemdetails}) => {
+
+
+const Homepage = ({setitemdetails,cartnumber}) => {
     const products = 
     [
         {
@@ -75,16 +77,36 @@ const Homepage = ({setitemdetails}) => {
             pieces:'MOQ 4 (pieces)'
         }
     ]
+
+    const [search, setsearch] = useState('')
+    const [query, setquery] = useState('')
+    const [realproduct, setrealproduct] = useState([])
+
+    useEffect(() => {
+        const filteredproducts = products.filter(product =>{
+            return  product.name.toLowerCase().includes(search.toLowerCase());
+          })
+    
+          setrealproduct(filteredproducts)
+           // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [search])
+    
+
+    const handlechange=(e)=>{
+        setquery(e.target.value)
+    }
+
+    onclick=()=>{
+        setsearch(query)
+    }
+
+
+
+
     return (
         <div>
-            <div className="phone">
-                <div className="time">9:41</div>
-                <div className="status">
-                    <div className="bar"><i className="fas fa-signal"></i></div>
-                    <div className="wifi"><i className="fas fa-wifi"></i></div>
-                    <div className="battery"><i className="fas fa-battery-full"></i></div>
-                </div>
-            </div>
+           
+            
             <div className="trollbasket">
                 <p>Trollbasket</p>
             </div>
@@ -102,24 +124,40 @@ const Homepage = ({setitemdetails}) => {
                 <div className="vl"></div>
                 <Link to='/cart'>
                     <div className="cart">
-                        <div className="carticon"><i className="fas fa-shopping-cart"></i></div>
+                        <div className="carticon">
+                            <div className="cartnumber">{cartnumber}</div>
+                            <i className="fas fa-shopping-cart"></i>
+                        </div>
                         <div className="carttext"><p>Cart</p></div>
                     </div>
                 </Link>
                 
             </div>
             <div className="search">
-                <input type="text" placeholder="Search merchbuy"/>
-                <div className="searchicon"><i className="fas fa-search"></i></div>
+                <input onChange={handlechange} type="text" placeholder="Search merchbuy"/>
+                <div onClick={onclick} className="searchicon"><i className="fas fa-search"></i></div>
             </div>
 
             <div className="card">
                 <div className="left"></div>
                 <div className="havingissues">
-                    <div className="havingtext"><p>Having any <span>issues </span>  with <br/> your order? </p></div>
+                        <div className="smallballs">
+                            <div className="small"></div>
+                            <div className="small"></div>
+                            <div className="small"></div>
+                            <div className="small"></div>
+                            <div className="small"></div>
+                            <div className="small"></div>
+                            <div className="small"></div>
+                            <div className="small"></div>
+                        </div>
+                    <div className="havingtext">
+                        <p>Having any <span>issues </span>  with <br/> your order? </p>
+                    </div>
                     <div className="contactus">Contact Us</div>
                 </div>
                 <div className="right"></div>
+                
             </div>
 
             <div className="pprs">
@@ -143,7 +181,8 @@ const Homepage = ({setitemdetails}) => {
 
             <div className="theproducts">
                     {
-                        products.map((product,i)=>(
+                        
+                        realproduct.map((product,i)=>(
                             <Link to='/detail'>
                                 <div onClick={()=>setitemdetails(product)} className="product" key={i}>
                                     <div className="image"><img src={product.photo} alt=""/></div>

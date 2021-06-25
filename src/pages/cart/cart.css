@@ -156,6 +156,8 @@
     outline: none;
     border: none;
     margin-top: 16px;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 /* .recentlyviewed */
@@ -166,9 +168,12 @@
 .recentlyviewed .text{
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
     color: #212C3D;
 
+}
+
+.recentlyviewed .text p{
+    font-size: 14px;
 }
 
 .recentlyviewed .text p:nth-child(2){

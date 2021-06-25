@@ -22,13 +22,13 @@ function App() {
      
         <Switch>
           <Route path="/cart">
-           <Cart cart={cart} itemdetails={itemdetails}/>
+           <Cart setcart={setcart} cart={cart} itemdetails={itemdetails}/>
           </Route>
           <Route path="/detail">
-           <Detail itemdetails={itemdetails} setcart={setcart} cart={cart}/>
+           <Detail cartnumber={cart.length} itemdetails={itemdetails} setcart={setcart} cart={cart}/>
           </Route>
           <Route path="/">
-           <Homepage setitemdetails={setitemdetails}/>
+           <Homepage cartnumber={cart.length} setitemdetails={setitemdetails}/>
           </Route>
         </Switch>
     </Router>
