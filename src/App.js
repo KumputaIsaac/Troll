@@ -16,7 +16,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div style={{maxWidth:'375px'}} className="App">
       <homepage />
       <Router>
      

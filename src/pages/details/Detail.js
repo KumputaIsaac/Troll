@@ -65,7 +65,7 @@ const Detail = ({itemdetails,setcart,cart,cartnumber}) => {
                 <div className="aboutimage">
                     <p >{itemdetails.name}</p>
                     <p >{itemdetails.description}</p>
-                    <p >{itemdetails.price} <span>/Piece</span></p>
+                    <p >₦ {itemdetails.price} <span>/Piece</span></p>
                 </div>
             </div>
             

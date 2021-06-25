@@ -102,7 +102,7 @@ const Cart = ({cart,setcart}) => {
                                 <div className="image"><img src={product.photo} alt=""/></div>
                                 <div className="text">
                                     <p>{product.name}</p>
-                                    <p>N {product.price}</p>
+                                    <p>₦ {product.price}</p>
                                 </div>
                             </div>
                             <hr/>
