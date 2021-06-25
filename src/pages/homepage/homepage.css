@@ -176,6 +176,17 @@ body{
     position: relative;
 }
 
+.card .havingissues img.up{
+    position: absolute;
+    left: 0;
+    /* display: none; */
+}
+
+.card .havingissues img.down{
+    position: absolute;
+    right: 0;
+}
+
 .havingissues .small{
     position: absolute;
     width: 2.3px;

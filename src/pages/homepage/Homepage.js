@@ -8,6 +8,8 @@ import nylon from '../../images/6.png'
 import home from '../../images/test4.svg'
 import buy from '../../images/test1.svg'
 import deal from '../../images/test2.svg'
+import up from '../../images/up.svg'
+import up2 from '../../images/up2.svg'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useEffect, useState } from 'react';
 
@@ -141,6 +143,8 @@ const Homepage = ({setitemdetails,cartnumber}) => {
             <div className="card">
                 <div className="left"></div>
                 <div className="havingissues">
+                        <img className='up' src={up} alt="" />
+                        <img className='down' src={up2} alt="" />
                         <div className="smallballs">
                             <div className="small"></div>
                             <div className="small"></div>
