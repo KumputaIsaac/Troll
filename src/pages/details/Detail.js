@@ -14,12 +14,23 @@ const Detail = ({itemdetails,setcart,cart,cartnumber}) => {
 
     const handleaddclick =()=>{
         setvisible(true)
-        setcart(cart=>[...cart,itemdetails])
+        // setcart(cart=>[...cart,itemdetails])
+
+        const exist = cart.find((x) => x.id === itemdetails.id);
+        if (exist) {
+          setcart(
+            cart.map((x) =>
+              x.id === itemdetails.id ? { ...exist, quantity: exist.quantity + 1 } : x
+            )
+          );
+        } else {
+          setcart([...cart, { ...itemdetails, quantity: 1 }]);
+        }
+
     }
 
     const handlecancel=()=>{
         setvisible(false)
-  
     }
     return (
         <div>

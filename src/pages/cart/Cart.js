@@ -16,7 +16,7 @@ const Cart = ({cart,setcart}) => {
         {
             photo: hand,
             name:'Free sample small tote bag gucci fen...',
-            price:'₦900 - ₦1,500',
+            price: 1500,
             pieces:'MOQ 4 (pieces)',
             location: 'Lagos', 
             quantity:0,
@@ -26,7 +26,7 @@ const Cart = ({cart,setcart}) => {
         {
             photo: shoe,
             name:'Nice Vans Sneakers',
-            price:'₦1900 - ₦45,500',
+            price:45500,
             id:2,
             location: 'Lagos', 
             quantity:0,
@@ -36,7 +36,7 @@ const Cart = ({cart,setcart}) => {
         {
             photo: coke,
             name:'Free sample small drink',
-            price:'₦900 - ₦1,500',
+            price:1500,
             id:3,
             location: 'Lagos', 
             quantity:0,
@@ -125,11 +125,11 @@ const Cart = ({cart,setcart}) => {
             <div className="subtotalcheckout">
                 <div className="subtotal">
                     <p>Subtotal</p>
-                    <p>N {itemsPrice}</p>
+                    <p>₦ {itemsPrice}</p>
                 </div>
                 <div className="total">
                     <p>Total</p>
-                    <p>N {itemsPrice}</p>
+                    <p>₦ {itemsPrice}</p>
                 </div>
 
                 <button>Checkout</button>
@@ -149,7 +149,7 @@ const Cart = ({cart,setcart}) => {
                                 <div className="product" key={i}>
                                     <div className="image"><img src={product.photo} alt=""/></div>
                                     <p className="fool">{product.name}</p>
-                                    <p className="text">N {product.price}</p>
+                                    <p className="text">₦ {product.price}</p>
                                     <p>{product.pieces}</p>
 
                                 </div>

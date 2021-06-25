@@ -187,7 +187,7 @@ const Homepage = ({setitemdetails,cartnumber}) => {
                                 <div onClick={()=>setitemdetails(product)} className="product" key={i}>
                                     <div className="image"><img src={product.photo} alt=""/></div>
                                     <p className="fool">{product.name}</p>
-                                    <p className="text">N {product.price}</p>
+                                    <p className="text">₦ {product.price}</p>
                                     <p>{product.pieces}</p>
 
                                 </div>
