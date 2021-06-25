@@ -15,7 +15,6 @@ const Detail = ({itemdetails,setcart,cart,cartnumber}) => {
     const handleaddclick =()=>{
         setvisible(true)
         setcart(cart=>[...cart,itemdetails])
-        console.log(cart)
     }
 
     const handlecancel=()=>{

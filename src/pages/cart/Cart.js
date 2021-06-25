@@ -4,10 +4,11 @@ import shoe from '../../images/2.png'
 import coke from '../../images/1.png'
 import hand from '../../images/3.png'
 import { useHistory } from "react-router-dom";
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 import back from '../../images/back.svg'
+
+
 
 const Cart = ({cart,setcart}) => {
     const products = 
@@ -43,12 +44,6 @@ const Cart = ({cart,setcart}) => {
             pieces:'MOQ 4 (pieces)'
         },
     ]
-
-    onclick=()=>{
-        let quantity = 0
-        quantity++
-        console.log(quantity)
-    }
     
 
     let history = useHistory();
@@ -56,7 +51,36 @@ const Cart = ({cart,setcart}) => {
     const goToPreviousPath = (e) => {
         e.preventDefault();
        history.goBack()
-}
+    }
+
+    const itemsPrice = cart.reduce((a, c) => a + c.quantity * c.price, 0);
+
+    const onRemove = (product) => {
+        const exist = cart.find((x) => x.id === product.id);
+        if (exist.quantity === 1) {
+          setcart(cart.filter((x) => x.id !== product.id));
+        } else {
+          setcart(
+            cart.map((x) =>
+              x.id === product.id ? { ...exist, quantity: exist.quantity - 1 } : x
+            )
+          );
+        }
+      };
+
+    const onAdd = (product) => {
+        const exist = cart.find((x) => x.id === product.id);
+        if (exist) {
+          setcart(
+            cart.map((x) =>
+              x.id === product.id ? { ...exist, quantity: exist.quantity + 1 } : x
+            )
+          );
+        } else {
+          setcart([...cart, { ...product, quantity: 1 }]);
+        }
+      };
+
 
     const handleRemove=(id)=> {
         const newList = cart.filter((item) => item.id !== id)
@@ -78,7 +102,7 @@ const Cart = ({cart,setcart}) => {
                                 <div className="image"><img src={product.photo} alt=""/></div>
                                 <div className="text">
                                     <p>{product.name}</p>
-                                    <p>{product.price}</p>
+                                    <p>N {product.price}</p>
                                 </div>
                             </div>
                             <hr/>
@@ -88,9 +112,9 @@ const Cart = ({cart,setcart}) => {
                                     <p  className="text">Delete</p>
                                 </div>
                                 <div className="counter">
-                                    <div className="plus">-</div>
+                                    <div onClick={() => onRemove(product)} className="plus">-</div>
                                     <div className="text">{product.quantity}</div>
-                                    <div className="plus" onClick={onclick}>+</div>
+                                    <div className="plus" onClick={()=> onAdd(product)}>+</div>
                                 </div>
                             </div>
                         </div>
@@ -101,11 +125,11 @@ const Cart = ({cart,setcart}) => {
             <div className="subtotalcheckout">
                 <div className="subtotal">
                     <p>Subtotal</p>
-                    <p>N0</p>
+                    <p>N {itemsPrice}</p>
                 </div>
                 <div className="total">
                     <p>Total</p>
-                    <p>N0</p>
+                    <p>N {itemsPrice}</p>
                 </div>
 
                 <button>Checkout</button>
@@ -118,19 +142,17 @@ const Cart = ({cart,setcart}) => {
                 </div>
 
                 
-                <div style={{marginBottom:'0px',padding:'none',fontSize: '12px'}} className="theproducts">
+                <div style={{marginBottom:'0px',padding:'0',fontSize: '12px'}} className="theproducts">
                     {
                         
                         products.map((product,i)=>(
-                            <Link to='/detail'>
                                 <div className="product" key={i}>
                                     <div className="image"><img src={product.photo} alt=""/></div>
                                     <p className="fool">{product.name}</p>
-                                    <p className="text">{product.price}</p>
+                                    <p className="text">N {product.price}</p>
                                     <p>{product.pieces}</p>
 
                                 </div>
-                            </Link>
                         ))
                     }
                 </div>

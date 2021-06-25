@@ -19,7 +19,7 @@ const Homepage = ({setitemdetails,cartnumber}) => {
         {
             photo: hand,
             name:'Free sample small tote bag gucci fen...',
-            price:'₦900 - ₦1,500',
+            price:1500,
             pieces:'MOQ 4 (pieces)',
             location: 'Lagos', 
             quantity:0,
@@ -29,7 +29,7 @@ const Homepage = ({setitemdetails,cartnumber}) => {
         {
             photo: shoe,
             name:'Nice Vans Sneakers',
-            price:'₦1900 - ₦45,500',
+            price:45500,
             id:2,
             location: 'Lagos', 
             quantity:0,
@@ -39,7 +39,7 @@ const Homepage = ({setitemdetails,cartnumber}) => {
         {
             photo: coke,
             name:'Free sample small drink',
-            price:'₦900 - ₦1,500',
+            price:1500,
             id:3,
             location: 'Lagos', 
             quantity:0,
@@ -49,8 +49,8 @@ const Homepage = ({setitemdetails,cartnumber}) => {
         {
             photo: nylon,
             name:'Free sample small nylon',
-            price:'₦900 - ₦1,500',
-            id:3,
+            price:2500,
+            id:4,
             quantity:0,
             location: 'Lagos', 
             description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
@@ -59,8 +59,8 @@ const Homepage = ({setitemdetails,cartnumber}) => {
         {
             photo: food,
             name:'Free sample small food',
-            price:'₦900 - ₦1,500',
-            id:3,
+            price:10500,
+            id:5,
             quantity:0,
             location: 'Lagos', 
             description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
@@ -69,9 +69,9 @@ const Homepage = ({setitemdetails,cartnumber}) => {
         {
             photo: box,
             name:'Free sample small box',
-            price:'₦900 - ₦1,500',
+            price: 11500,
             quantity:0,
-            id:3,
+            id:6,
             location: 'Lagos', 
             description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
             pieces:'MOQ 4 (pieces)'
@@ -187,7 +187,7 @@ const Homepage = ({setitemdetails,cartnumber}) => {
                                 <div onClick={()=>setitemdetails(product)} className="product" key={i}>
                                     <div className="image"><img src={product.photo} alt=""/></div>
                                     <p className="fool">{product.name}</p>
-                                    <p className="text">{product.price}</p>
+                                    <p className="text">N {product.price}</p>
                                     <p>{product.pieces}</p>
 
                                 </div>
